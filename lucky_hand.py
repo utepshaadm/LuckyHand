@@ -19,7 +19,7 @@ class LH:
          card1 = self.get_val(self.deck[0])
          self.deck.append(self.deck.pop(0))
          self.deck.append(self.deck.pop(card1))
-         return self.deck[0] % 26
+         return self.deck[self.deck[0]] % 26
          
     def encrypt_letter(self, letter):
         key = self.ksa()
