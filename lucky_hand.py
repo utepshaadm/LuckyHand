@@ -16,16 +16,10 @@ class LH:
          
     def ksa(self):
          self.deck.append(self.deck.pop(0))
-         self.deck.append(self.deck.pop(0))
-         self.deck.append(self.deck.pop(0))
-         self.deck.append(self.deck.pop(0))
          card1 = self.get_val(self.deck[0])
-         card2 = self.get_val(self.deck[1])
-         card3 = self.get_val(self.deck[2])
-         card4 = self.get_val(self.deck[3])
-         total = (card1 + card2 + card3 + card4) - 1
-         self.deck.append(self.deck.pop(total))
-         return self.deck[4] % 26
+         self.deck.append(self.deck.pop(0))
+         self.deck.append(self.deck.pop(card1))
+         return self.deck[0] % 26
          
     def encrypt_letter(self, letter):
         key = self.ksa()
